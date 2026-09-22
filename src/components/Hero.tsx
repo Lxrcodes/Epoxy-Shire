@@ -19,11 +19,10 @@ export default function Hero() {
       className="relative flex flex-col min-h-screen"
       style={{
         background: `
-          radial-gradient(ellipse at 18% 82%, rgba(232, 195, 71, 0.17) 0%, transparent 48%),
-          radial-gradient(ellipse at 82% 12%, rgba(20, 184, 166, 0.11) 0%, transparent 48%),
-          radial-gradient(ellipse at 55% 68%, rgba(37, 99, 235, 0.24) 0%, transparent 55%),
-          radial-gradient(ellipse at 5% 5%, rgba(201, 146, 42, 0.06) 0%, transparent 40%),
-          linear-gradient(172deg, #050608 0%, #07090e 28%, #0b0f1c 52%, #060810 78%, #050608 100%)
+          radial-gradient(ellipse at 18% 82%, rgba(232, 195, 71, 0.15) 0%, transparent 48%),
+          radial-gradient(ellipse at 82% 12%, rgba(20, 184, 166, 0.10) 0%, transparent 48%),
+          linear-gradient(172deg, rgba(5,6,8,0.82) 0%, rgba(7,9,14,0.70) 40%, rgba(5,6,8,0.82) 100%),
+          url('/metallic-epoxy.jpg') center/cover no-repeat
         `,
       }}
     >
@@ -50,7 +49,7 @@ export default function Hero() {
       {/* Main content */}
       <div className="flex-1 flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-36 pb-12 lg:pt-0 lg:pb-0">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center min-h-[88vh]">
+          <div className="flex items-center min-h-[88vh]">
 
             {/* Text */}
             <div>
@@ -85,34 +84,6 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Hero image placeholder */}
-            <div className="hidden lg:block" aria-hidden="true">
-              <div
-                className="relative rounded-md overflow-hidden"
-                style={{
-                  height: '62vh',
-                  maxHeight: '640px',
-                  background: `
-                    radial-gradient(ellipse at 35% 65%, rgba(232, 195, 71, 0.28) 0%, transparent 48%),
-                    radial-gradient(ellipse at 70% 30%, rgba(20, 184, 166, 0.22) 0%, transparent 48%),
-                    radial-gradient(ellipse at 50% 80%, rgba(37, 99, 235, 0.35) 0%, transparent 55%),
-                    linear-gradient(135deg, #0a0e1a 0%, #131a2e 50%, #0a0e1a 100%)
-                  `,
-                  border: '1px solid rgba(201, 146, 42, 0.22)',
-                  boxShadow: '0 0 80px rgba(201, 146, 42, 0.08), 0 32px 72px rgba(0, 0, 0, 0.65)',
-                }}
-              >
-                {/* Simulated floor reflection lines */}
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    backgroundImage:
-                      'repeating-linear-gradient(168deg, transparent, transparent 38px, rgba(232,195,71,0.04) 38px, rgba(232,195,71,0.04) 39px)',
-                  }}
-                />
-                {/* TODO: Replace this gradient div with a real hero photo — full-bleed landscape works best */}
-              </div>
-            </div>
 
           </div>
         </div>

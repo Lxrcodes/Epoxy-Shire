@@ -2,8 +2,7 @@ interface Finish {
   title: string
   description: string
   use: string
-  gradient: string
-  accentColor: string
+  src: string
 }
 
 const FINISHES: Finish[] = [
@@ -12,45 +11,35 @@ const FINISHES: Finish[] = [
     description:
       'A flowing, three-dimensional shimmer effect. Each floor is completely unique, with pigments blended on-site to create liquid-metal movement across the surface. Stunning in showrooms, studios and statement interiors.',
     use: 'Showrooms, studios, statement interiors, garages',
-    gradient:
-      'radial-gradient(ellipse at 40% 55%, rgba(232,195,71,0.65) 0%, rgba(201,146,42,0.4) 30%, rgba(20,184,166,0.25) 62%, rgba(8,10,15,0.95) 100%)',
-    accentColor: 'rgba(232,195,71,0.7)',
+    src: '/metallic-epoxy.jpg',
   },
   {
     title: 'Flake and Chip',
     description:
       'Decorative vinyl flakes broadcast into the basecoat create a professional, practical finish with excellent grip underfoot. The most popular choice for garages and workshop floors: robust, easy to clean and hard to scuff.',
     use: 'Garages, workshops, commercial entries, utility rooms',
-    gradient:
-      'radial-gradient(ellipse at 50% 50%, rgba(148,163,184,0.55) 0%, rgba(100,116,139,0.40) 40%, rgba(51,65,85,0.7) 100%)',
-    accentColor: 'rgba(148,163,184,0.6)',
+    src: '/flake-and-chip.jpg',
   },
   {
     title: 'Quartz System',
     description:
       'Broadcast quartz aggregate creates a robust, textured surface with outstanding slip resistance. Ideal for commercial kitchens, pool surrounds, wet rooms and anywhere traction is non-negotiable.',
     use: 'Commercial kitchens, pool surrounds, wet rooms, steps',
-    gradient:
-      'radial-gradient(ellipse at 45% 45%, rgba(203,213,225,0.60) 0%, rgba(148,163,184,0.45) 40%, rgba(71,85,105,0.75) 100%)',
-    accentColor: 'rgba(203,213,225,0.65)',
+    src: '/quartz-epoxy.jpeg',
   },
   {
     title: 'Solid Colour',
     description:
       'Clean, seamless and bold. Choose from hundreds of RAL or BS colours for a refined, contemporary look. Simple, lasting, and adaptable to any setting from contemporary kitchens to industrial workshops.',
     use: 'Any room, garages, commercial spaces, basements',
-    gradient:
-      'linear-gradient(135deg, rgba(37,99,235,0.60) 0%, rgba(30,58,138,0.78) 50%, rgba(15,29,74,0.92) 100%)',
-    accentColor: 'rgba(37,99,235,0.7)',
+    src: '/solid-epoxy.jpeg',
   },
   {
     title: 'Polyaspartic Topcoat',
     description:
       'An ultra-fast-curing, UV-stable clear topcoat that delivers maximum scratch and chemical resistance. Applied over any basecoat system, with floors ready to walk on within hours. A must for commercial use.',
     use: 'Top coat for any system, commercial floors, fast-turnaround projects',
-    gradient:
-      'linear-gradient(135deg, rgba(20,184,166,0.45) 0%, rgba(13,148,136,0.60) 40%, rgba(8,10,15,0.90) 100%)',
-    accentColor: 'rgba(20,184,166,0.6)',
+    src: '/Polyaspartic-topcoat-epoxy.jpg',
   },
 ]
 
@@ -81,25 +70,16 @@ export default function Finishes() {
             >
               <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
 
-                {/* Image placeholder */}
+                {/* Finish photo */}
                 <div
                   className="lg:w-2/5 flex-shrink-0 relative overflow-hidden"
-                  style={{
-                    minHeight: '260px',
-                    background: finish.gradient,
-                  }}
-                  aria-hidden="true"
+                  style={{ minHeight: '260px' }}
                 >
-                  {/* Subtle reflection lines */}
-                  <div
-                    aria-hidden="true"
-                    className="absolute inset-0"
-                    style={{
-                      backgroundImage:
-                        'repeating-linear-gradient(160deg, transparent, transparent 28px, rgba(255,255,255,0.03) 28px, rgba(255,255,255,0.03) 29px)',
-                    }}
+                  <img
+                    src={finish.src}
+                    alt={finish.title}
+                    className="absolute inset-0 w-full h-full object-cover"
                   />
-                  {/* TODO: Replace gradient background with a real photo of this finish */}
                 </div>
 
                 {/* Text */}

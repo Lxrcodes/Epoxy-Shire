@@ -3,6 +3,7 @@ interface GalleryCell {
   sublabel: string
   src: string
   objectPosition?: string
+  aspectRatio?: string
 }
 
 const CELLS: GalleryCell[] = [
@@ -10,25 +11,21 @@ const CELLS: GalleryCell[] = [
     label: 'Kitchen floor',
     sublabel: 'Metallic swirl epoxy over old ceramic tile',
     src: '/image1.jpeg',
-    objectPosition: 'center',
   },
   {
     label: 'Commercial warehouse',
     sublabel: 'Full-broadcast flake system over bare concrete',
     src: '/image2.jpeg',
-    objectPosition: 'top',
   },
   {
     label: 'Large garage',
     sublabel: 'Metallic marble epoxy over cracked concrete slab',
     src: '/image3.jpeg',
-    objectPosition: 'top',
   },
   {
     label: 'Garage floor',
     sublabel: 'Deep blue metallic over stained, cracked slab',
     src: '/image4.jpeg',
-    objectPosition: 'top',
   },
 ]
 
@@ -50,11 +47,12 @@ export default function Gallery() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
           {CELLS.map((cell, i) => (
             <figure
               key={i}
-              className="relative overflow-hidden rounded-md group aspect-[3/4]"
+              className="relative overflow-hidden rounded-md group"
+              style={{ aspectRatio: cell.aspectRatio ?? '9/16' }}
               aria-label={cell.label}
             >
               <img
@@ -62,7 +60,7 @@ export default function Gallery() {
                 alt={cell.label}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 style={{ objectPosition: cell.objectPosition ?? 'center' }}
-                loading="lazy"
+                loading="eager"
               />
               {/* Before & After badge */}
               <span
@@ -71,11 +69,11 @@ export default function Gallery() {
                 Before &amp; After
               </span>
               {/* Caption */}
-              <figcaption className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-charcoal-950/90 to-transparent">
+              <figcaption className="absolute bottom-0 inset-x-0 p-4">
                 <p className="text-white text-sm font-medium font-heading leading-tight">
                   {cell.label}
                 </p>
-                <p className="text-slate-400 text-xs mt-0.5">{cell.sublabel}</p>
+                <p className="text-slate-200 text-xs mt-0.5">{cell.sublabel}</p>
               </figcaption>
             </figure>
           ))}
