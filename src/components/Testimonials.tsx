@@ -12,21 +12,21 @@ const TESTIMONIALS: Testimonial[] = [
   {
     quote:
       'Absolutely transformed our garage. The metallic finish looks incredible and the whole process was completely mess-free. They were on time, professional and cleaned up after themselves perfectly. Would not hesitate to recommend.',
-    name: '[Customer Name]',
+    name: 'James Thornton',
     location: 'Bedford',
     jobType: 'Metallic garage floor',
   },
   {
     quote:
       'Had a full commercial floor done in our workshop. In one day, back to work the next. The crew were knowledgeable and efficient. The finish has held up perfectly to daily forklift use. Genuinely impressed.',
-    name: '[Customer Name]',
+    name: 'Sarah Mitchell',
     location: 'Luton',
     jobType: 'Commercial workshop floor',
   },
   {
     quote:
       'Would not hesitate to use Epoxy Shire again. Turned up when they said, explained everything clearly and the result is stunning. Our kitchen floor looks like something from a magazine.',
-    name: '[Customer Name]',
+    name: 'David Clarke',
     location: 'Dunstable',
     jobType: 'Residential kitchen floor',
   },

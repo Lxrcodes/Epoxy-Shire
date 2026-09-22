@@ -2,6 +2,7 @@ import AnnouncementBar from './components/AnnouncementBar'
 import Header from './components/Header'
 import MobileBar from './components/MobileBar'
 import Hero from './components/Hero'
+import BrandStory from './components/BrandStory'
 import Services from './components/Services'
 import Finishes from './components/Finishes'
 import Gallery from './components/Gallery'
@@ -21,6 +22,7 @@ export default function App() {
       <Header />
       <main>
         <Hero />
+        <BrandStory />
         <Services />
         <CtaBand
           headline="Ready to transform your floor?"

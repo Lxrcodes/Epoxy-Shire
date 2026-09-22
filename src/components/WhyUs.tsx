@@ -47,61 +47,13 @@ export default function WhyUs() {
     <section id="why-us" aria-labelledby="why-us-heading" className="bg-charcoal-950 py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Heading + brand story */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start mb-20">
-          <div>
-            <p className="section-label mb-4">Why choose us</p>
-            <h2 id="why-us-heading" className="section-title text-4xl sm:text-5xl mb-6">
-              Strength you can<br />
-              <span className="gold-text">see underfoot.</span>
-            </h2>
-            <a href="#contact" className="btn-primary mt-2">
-              Get a free quote
-            </a>
-          </div>
-
-          {/* Brand story panel */}
-          <div
-            className="rounded-md p-8 lg:p-10 relative overflow-hidden"
-            style={{
-              background: 'linear-gradient(135deg, rgba(201,146,42,0.08) 0%, rgba(13,16,32,0.97) 60%)',
-              border: '1px solid rgba(201,146,42,0.2)',
-            }}
-          >
-            {/* Decorative horse-brand element */}
-            <div
-              aria-hidden="true"
-              className="absolute top-0 right-0 w-32 h-32 opacity-5"
-              style={{
-                background: 'radial-gradient(circle, #e8c347 0%, transparent 70%)',
-              }}
-            />
-            <p
-              className="font-heading font-semibold text-gold-600 text-xs uppercase tracking-[0.2em] mb-4"
-              aria-hidden="true"
-            >
-              The Epoxy Shire story
-            </p>
-            <blockquote className="text-slate-200 text-base lg:text-lg leading-relaxed font-sans">
-              The shire horse was the breed that built Britain. Bred for strength, dependability and
-              a full day's honest work. That is exactly what we expect of every floor we install.
-            </blockquote>
-            <p className="text-slate-400 text-sm leading-relaxed mt-4">
-              An epoxy floor earns its keep. You get a space that works harder, looks better and
-              lasts longer. We choose the materials and methods that make that possible. No
-              shortcuts, no cheap systems, no filler passes.
-            </p>
-            <div
-              aria-hidden="true"
-              className="mt-6 h-px w-full"
-              style={{
-                background: 'linear-gradient(to right, rgba(201,146,42,0.5), transparent)',
-              }}
-            />
-            <p className="text-gold-700 text-sm font-heading font-medium mt-4 italic">
-              Epoxy Shire. Bedfordshire's premium resin floor specialists.
-            </p>
-          </div>
+        {/* Heading */}
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <p className="section-label mb-4">Why choose us</p>
+          <h2 id="why-us-heading" className="section-title text-4xl sm:text-5xl mb-6">
+            Strength you can<br />
+            <span className="gold-text">see underfoot.</span>
+          </h2>
         </div>
 
         {/* Features grid */}
